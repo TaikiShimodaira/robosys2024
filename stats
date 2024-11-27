@@ -1,0 +1,44 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Taiki Shimodaira
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+def tonum(s):
+    
+    try:
+        return int(s)
+    except:
+        return float(s)
+
+def main():
+    print("数字を1行ずつ入力してください（Ctrl+Dで終了）:")
+
+    numbers = []
+    for line in sys.stdin:
+        try:
+            # 数字に変換してリストに追加
+            numbers.append(tonum(line.strip()))
+        except ValueError:
+            print(f"無効な入力: {line.strip()} をスキップします。")
+
+    if not numbers:
+        print("数字が入力されませんでした。")
+        return
+
+    # 合計、平均、最大値、最小値を計算
+    total = sum(numbers)
+    average = total / len(numbers)
+    max_value = max(numbers)
+    min_value = min(numbers)
+
+    # 結果を表示
+    print("\n結果:")
+    print(f"入力された数字: {numbers}")
+    print(f"合計: {total}")
+    print(f"平均: {average}")
+    print(f"最大値: {max_value}")
+    print(f"最小値: {min_value}")
+
+if __name__ == "__main__":
+    main()
