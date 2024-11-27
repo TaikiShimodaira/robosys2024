@@ -9,5 +9,23 @@
 ```
 git clone https://github.com/TaikiShimodaira/robosys2024.git  
 cd robosys2024  
-chmod +X stats
+```
+# 使用方法
+下記が実行例である
+```
+chmod +x stats  
+./stats  
+数字を1行ずつ入力してください（Ctrl+Dで終了）:  
+1  
+2  
+3  
+4  
+5  
+
+結果:  
+入力された数字: [1, 2, 3, 4, 5]  
+合計: 15  
+平均: 3.0  
+最大値: 5  
+最小値: 1
 ```
