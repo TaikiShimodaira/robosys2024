@@ -5,5 +5,5 @@
 ## 概要
 このプログラムは入力された数値から、合計、平均、最大値、最小値を計算して出力するプログラムです。
 ## インストール方法
-$ git clone https://github.com/TaikiShimodaira/robosys2024.git
+$ git clone https://github.com/TaikiShimodaira/robosys2024.git  
 $ cd robosys2024
