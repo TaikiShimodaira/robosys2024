@@ -10,7 +10,7 @@
 git clone https://github.com/TaikiShimodaira/robosys2024.git  
 cd robosys2024  
 ```
-# 使用方法
+## 使用方法
 下記が実行例である
 ```
 chmod +x stats  
@@ -21,7 +21,9 @@ chmod +x stats
 3  
 4  
 5  
-
+```
+## 実行結果
+```
 結果:  
 入力された数字: [1, 2, 3, 4, 5]  
 合計: 15  
