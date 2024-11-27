@@ -8,5 +8,6 @@
 下記のコマンドを入力する
 ```
 git clone https://github.com/TaikiShimodaira/robosys2024.git  
-cd robosys2024
+cd robosys2024  
+chmod +X stats
 ```
