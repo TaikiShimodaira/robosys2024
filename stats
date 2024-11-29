@@ -1,17 +1,42 @@
-#!/usr/bin/python3
+#!/usr/bin/python3i
 # SPDX-FileCopyrightText: 2024 Taiki Shimodaira
 # SPDX-License-Identifier: BSD-3-Clause
 
 import sys
+import argparse
+import statistics
+import math
 
 def tonum(s):
-    
     try:
         return int(s)
     except:
         return float(s)
 
+#歪度を計算
+def calculate_skewness(numbers, mean, stddev):
+    n = len(numbers)
+    if n < 2 or stddev == 0:
+        return 0
+    return sum((x - mean) ** 3 for x in numbers) / (n * stddev**3)
+
+#尖度を計算
+def calculate_kurtosis(numbers, mean, stddev):
+    n = len(numbers)
+    if n < 2 or stddev == 0:
+        return 0
+    return sum((x - mean) ** 4 for x in numbers) / (n * stddev**4) - 3
+
 def main():
+    parser = argparse.ArgumentParser(description="統計量を計算するプログラム")
+    parser.add_argument(
+        "-s",
+        nargs="*",
+        choices=["total", "average", "max", "min", "variance", "stderr", "median", "skewness", "kurtosis", "all"],
+        default=["all"],
+    )
+    args = parser.parse_args()
+
     print("数字を1行ずつ入力してください（Ctrl+Dで終了）:")
 
     numbers = []
@@ -26,19 +51,40 @@ def main():
         print("数字が入力されませんでした。")
         return
 
-    # 合計、平均、最大値、最小値を計算
+    # 統計量の計算
     total = sum(numbers)
     average = total / len(numbers)
     max_value = max(numbers)
     min_value = min(numbers)
+    variance = statistics.variance(numbers) if len(numbers) > 1 else 0
+    standard_error = math.sqrt(variance) / math.sqrt(len(numbers)) if len(numbers) > 1 else 0
+    median = statistics.median(numbers)
+    stddev = math.sqrt(variance) if len(numbers) > 1 else 0
+    skewness = calculate_skewness(numbers, average, stddev)
+    kurt = calculate_kurtosis(numbers, average, stddev)
 
-    # 結果を表示
+    # 結果の表示
     print("\n結果:")
-    print(f"入力された数字: {numbers}")
-    print(f"合計: {total}")
-    print(f"平均: {average}")
-    print(f"最大値: {max_value}")
-    print(f"最小値: {min_value}")
+
+    if "all" in args.show or "total" in args.show:
+        print(f"合計: {total}")
+    if "all" in args.show or "average" in args.show:
+        print(f"平均: {average}")
+    if "all" in args.show or "max" in args.show:
+        print(f"最大値: {max_value}")
+    if "all" in args.show or "min" in args.show:
+        print(f"最小値: {min_value}")
+    if "all" in args.show or "variance" in args.show:
+        print(f"分散: {variance}")
+    if "all" in args.show or "stderr" in args.show:
+        print(f"標準誤差: {standard_error}")
+    if "all" in args.show or "median" in args.show:
+        print(f"中央値: {median}")
+    if "all" in args.show or "skewness" in args.show:
+        print(f"歪度: {skewness}")
+    if "all" in args.show or "kurtosis" in args.show:
+        print(f"尖度: {kurt}")
 
 if __name__ == "__main__":
     main()
+
