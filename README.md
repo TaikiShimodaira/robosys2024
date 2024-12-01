@@ -14,8 +14,13 @@ git clone https://github.com/TaikiShimodaira/robosys2024.git
 cd robosys2024  
 chmod +x stats
 ```
-下記のように--showの後に求めたい統計値を入力
-./stats  
+--showの後に求めたい統計値の引数を入力  
+統計値の引数
+合計:total  平均:average  最大値:max  最小値:min  分散:variance  
+標準誤差:stderr  中央値:median  歪度:skewness  尖度:kurtosis  
+
+```
+./stats --show total skewness kurtosis  
 数字を1行ずつ入力してください（Ctrl+Dで終了）:  
 1  
 2  
@@ -26,11 +31,9 @@ chmod +x stats
 ## 実行結果
 ```
 結果:  
-入力された数字: [1, 2, 3, 4, 5]  
-合計: 15  
-平均: 3.0  
-最大値: 5  
-最小値: 1
+合計: 15    
+歪度: 0.0  
+尖度: -1.9120000000000001
 ```
 ## テスト環境
 以下の環境で動作を確認済みである    
