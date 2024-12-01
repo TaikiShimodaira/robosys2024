@@ -16,10 +16,9 @@ def tonum(s):
 #歪度を計算
 def calculate_skewness(numbers, mean, stddev):
     n = len(numbers)
-    if n < 2 or stddev == 0:
+    if n <2 or stddev == 0:
         return 0
     return sum((x - mean) ** 3 for x in numbers) / (n * stddev**3)
-
 #尖度を計算
 def calculate_kurtosis(numbers, mean, stddev):
     n = len(numbers)
@@ -30,7 +29,7 @@ def calculate_kurtosis(numbers, mean, stddev):
 def main():
     parser = argparse.ArgumentParser(description="統計量を計算するプログラム")
     parser.add_argument(
-        "-s",
+        "-s", "--show",
         nargs="*",
         choices=["total", "average", "max", "min", "variance", "stderr", "median", "skewness", "kurtosis", "all"],
         default=["all"],
