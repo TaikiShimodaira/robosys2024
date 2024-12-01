@@ -5,19 +5,19 @@
 ## 概要
 このプログラムは入力された数値から、合計、平均、最大値、最小値、分散、標準偏差、中央値、歪度、尖度の中から選んだ項目を計算して出力します。
 ## 使用方法
-### リポジトリをクローンする
+### リポジトリをクローン
 ```
 git clone https://github.com/TaikiShimodaira/robosys2024.git
 ```
-実行可能にする
+### 実行可能にする
 ```
 cd robosys2024  
 chmod +x stats
-```
---showの後に求めたい統計値の引数を入力  
-統計値の引数  
-合計:total    平均:average    最大値:max    最小値:min    分散:variance  
+```  
+### 統計値の引数  
+合計:**total    平均:average    最大値:max    最小値:min    分散:variance  
 標準誤差:stderr    中央値:median    歪度:skewness    尖度:kurtosis  
+--showの後に求めたい統計値の引数を入力
 
 ```
 ./stats --show total skewness kurtosis  
