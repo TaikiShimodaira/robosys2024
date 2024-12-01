@@ -38,15 +38,30 @@ chmod +x stats
 歪度: 0.0  
 尖度: -1.9120000000000001
 ```
-## テスト環境
-以下の環境で動作を確認済みである    
+### 数字以外が入力された際の実行例と実行結果
 ```
-Python (3.7~3.11)  
-Ubuntu 20.04
+./stats --show total  
+数字を1行ずつ入力してください（Ctrl+Dで終了）:  
+a  
+無効な入力: a をスキップします。  
+あ  
+無効な入力: あ をスキップします。  
+?  
+無効な入力: ? をスキップします。  
+数字が入力されませんでした。  
 ```
+## 必要なソフトウェア
+Python　( テスト済みバージョン: 3.7~3.11 )
+## テスト環境  
+Ubuntu 20.04 LTS
+## 参考文献
+統計値について   https://data-viz-lab.com/stats  
+歪度と尖度について  https://x.gd/9jSEx  
+引数について   https://x.gd/wLzP2
 ## ライセンス・著作物
-- このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます。
-- このパッケージのコードの一部は、（CC-BY－SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです https://github.com/ryuichiueda/my_slides/tree/master/robosys_2024  
+- このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
+- このパッケージのコードの一部は、（CC-BY－SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです。
+  -  https://github.com/ryuichiueda/my_slides/tree/master/robosys_2024
 - © 2024 Taiki Shimodaira
 
 
