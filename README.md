@@ -55,7 +55,7 @@ Python　( テスト済みバージョン: 3.7~3.11 )
 ## テスト環境  
 Ubuntu 20.04 LTS
 ## 参考文献
-統計値について --https://data-viz-lab.com/stats
+統計値について   https://data-viz-lab.com/stats
 ## ライセンス・著作物
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 - このパッケージのコードの一部は、（CC-BY－SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです。
