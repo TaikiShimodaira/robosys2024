@@ -15,7 +15,7 @@ cd robosys2024
 chmod +x stats
 ```  
 ### 統計値の引数  
-合計:'total'    平均:average    最大値:max    最小値:min    分散:variance  
+合計: `total`    平均:average    最大値:max    最小値:min    分散:variance  
 標準誤差:stderr    中央値:median    歪度:skewness    尖度:kurtosis  
 --showの後に求めたい統計値の引数を入力
 
