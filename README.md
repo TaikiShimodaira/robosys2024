@@ -57,7 +57,7 @@ Ubuntu 20.04 LTS
 ## 参考文献
 統計値について   https://data-viz-lab.com/stats  
 歪度について     https://yukashun.com/skew-python/  
-歪度と尖度について  https://editverse.com/ja  
+歪度と尖度について  https://x.gd/9jSEx
 ## ライセンス・著作物
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 - このパッケージのコードの一部は、（CC-BY－SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです。
