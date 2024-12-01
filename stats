@@ -29,7 +29,7 @@ def calculate_kurtosis(numbers, mean, stddev):
 def main():
     parser = argparse.ArgumentParser(description="統計量を計算するプログラム")
     parser.add_argument(
-        "-s", "--show",
+        "--show",
         nargs="*",
         choices=["total", "average", "max", "min", "variance", "stderr", "median", "skewness", "kurtosis", "all"],
         default=["all"],

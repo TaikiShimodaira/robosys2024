@@ -40,7 +40,7 @@ in="数字を1行ずつ入力してください（Ctrl+Dで終了）:
 尖度: -2.3333333333333335"
 [ "$(printf "${out}")" = "$(printf "${in}")" ] || ng "$LINENO"
 
-out=$(echo -e "3\n2\n4\n2" | ./stats -s total median)
+out=$(echo -e "3\n2\n4\n2" | ./stats --show total median)
 in="数字を1行ずつ入力してください（Ctrl+Dで終了）:
 
 結果:
