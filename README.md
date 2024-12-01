@@ -20,7 +20,7 @@ chmod +x stats
 中央値: `median`        歪度: `skewness`        尖度: `kurtosis`  
 すべての統計値を出力させたい場合: `all`  
 ### 実行例
---showの後に求めたい統計値の引数を入力
+`./stats --show` の後に求めたい統計値の引数を入力
 
 ```
 ./stats --show total skewness kurtosis  
