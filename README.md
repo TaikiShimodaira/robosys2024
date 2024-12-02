@@ -53,7 +53,7 @@ a
 ## 必要なソフトウェア
 - Python　( テスト済みバージョン: 3.7~3.11 )
 ## テスト環境  
-- Ubuntu 20.04 LTS
+- Ubuntu 22.04 LTS
 ## 参考文献
 - 統計値について   https://data-viz-lab.com/stats  
 - 歪度と尖度について  https://x.gd/9jSEx  
